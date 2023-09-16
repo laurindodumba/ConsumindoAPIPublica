@@ -1,0 +1,43 @@
+Criar ambiente virtual - python -m venv curso
+Ativar ambiente virtual - curso\Scripts\activate
+Instalar o Flask no ambiente virtual - pip install flask
+Criar uma página .py, para adicionar as rotas
+Criar uma página Htmail
+Para executar o servidor do Flask é necessário usar o seguinte comando - set FLASK_APP=app.py
+
+
+# ======= API ========
+import requests
+
+url = https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4a54c25daca978288cd35a9a78ab6519
+        
+
+        https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=4a54c25daca978288cd35a9a78ab6519
+
+        https://api.themoviedb.org/3/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=4a54c25daca978288cd35a9a78ab6519
+
+        https://api.themoviedb.org/3/discover/movie?primary_release_year=2010&sort_by=vote_average.desc&api_key=4a54c25daca978288cd35a9a78ab6519
+
+        https://api.themoviedb.org/3/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10&api_key=4a54c25daca978288cd35a9a78ab6519
+
+        https://api.themoviedb.org/3/discover/movie?with_genres=878&with_cast=500&sort_by=vote_average.desc&api_key=4a54c25daca978288cd35a9a78ab6519
+
+
+
+
+headers = {
+    "accept": "application/json",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0YTU0YzI1ZGFjYTk3ODI4OGNkMzVhOWE3OGFiNjUxOSIsInN1YiI6IjY0ZWI1Mzg0ZTg5NGE2MDBjNzI5NTdlZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3KhY8-mx6d15shoOdbi_X7pD-fuPA8ndbI2eTFujQAI"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.text)
+
+
+http://image.tmdb.org/t/p/w500 - componente para imagem
+
+incluindo mais informações na página
+- Filmes de Drama
+- Filmes de Kids
+- Filmes de ficção Científica. - Tom Cruise
